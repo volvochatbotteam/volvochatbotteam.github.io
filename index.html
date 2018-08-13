@@ -1,1 +1,564 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Volvo Cognitive Playground</title>
+        <meta name="description" content="Love appster." />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/timeline.css">
+        <link rel="stylesheet" href="css/botstyle.css">
+        <!--Bootstrap 4-->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+        
+        <!--icons-->
+        <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </head>
+    <body>
+        <!--header-->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary sticky-navigation">
+            <a class="navbar-brand" style="font-size: xx-large" href="#"><strong>Volvo Enterprie ChatBot</strong></a>
+            <!-- <a style="color: rgb(255, 255, 255);">Learn. Ideate. Innovate</a> -->
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mr-3">
+                        <a class="nav-link page-scroll" href="#">Home</span></a>
+                    </li>
+                    <li class="nav-item mr-3">
+                        <a class="nav-link page-scroll" href="#features">Features<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mr-3">
+                        <a class="nav-link page-scroll" href="#Gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item mr-3">
+                        <a class="nav-link page-scroll" href="#RoadMap">Journey</a>
+                    </li>
+                    <li class="nav-item mr-3">
+                        <a class="nav-link page-scroll" href="#team">Team</a>
+                    </li>
+                    <li class="nav-item mr-3">
+                            <a class="nav-link page-scroll" href="https://teamplace.volvo.com/sites/volvoitindia/ChatBot/Lists/Chatbot%20Projects/AllItems.aspx">Projects</a>
+                    </li>
+                    <li class="nav-item mr-3">
+                        <a class="nav-link page-scroll" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item mr-3">
+                        <a id= "myBtn" class="nav-link page-scroll">Try It!</a>        
+                    </li>
+                </ul>
+            </div>
+            
+        </nav>
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close"></span>
+                <p><iframe style="background-color:white ; height:530px;width:600px" src='bot/bot.html'></iframe></p>
+            </div>
+        </div>
+        
+        <div id="bot">
+            <img id="flip" src="img/ic_launcher (2).png" />
+        </div>
+        
+        <!--main section-->
+        <section class="bg-texture hero pt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-white wow fadeIn">
+                        <div class="mt-5 pt-5 d-none d-md-block"></div>
+                        <h1>Volvo Enterprie ChatBot</h1>
+                        <h5>The Next Gen <span class="text-orange">Virtual Assistant</span> for Automation.</h5>
+                        <p class="mt-4 lead">
+                            It's here to Revolutionise the Customer Service, Let's build a Customer Support which never sleeps.
+                        </p>
+                        <p class="mt-4 lead">
+                            Volvo Enterprise Chatbot is here to add great value to business. It's a complete in-house developed and customizable chatbot, which can be integrated with any Volvo Enterprise Application.
+                        </p>
+                        <p class="mt-4 lead">
+                            It hosts a wide range of features, and the most important is the Natural Language Processing, enabling the conversation as close to a human conversation. 
+                        </p>
+                        <h5>
+                            Let's Ignite the Chatbot Revolution. <span id="chatLine" class="text-orange" style="cursor:pointer">Chat to Start.</span>
+                        </h5>
+                        <!-- <p class="mt-5">
+                            <a href="#" class="mr-2"><img src="img/google-play.png" class="store-img"/></a>
+                            <a href="#"><img src="img/apple_store.png" class="store-img"/> </a>
+                        </p> -->
+                    </div>
+                    <div class="col-md-6 d-none d-md-block wow fadeInRight">
+                        <img id= "test2" class="img-fluid mx-auto d-block" style="cursor:pointer" height="450" width="650" src="img/chatbot-icon-4.png"/>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!--main features-->
+        <section class="bg-white" id="features">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-8 mx-auto text-center wow fadeIn">
+                        <h2 class="text-primary">Why Choose Chatbot?</h2>
+                        <p class="lead">
+                            It's a next level of customer engagement.
+                        </p>
+                    </div>
+                </div>
+                <div class="row d-md-flex mt-4 text-center">
+                    <div class="col-sm-6 col-md-3 mt-2">
+                        <div class="card border-none wow fadeIn">
+                            <div class="card-body">
+                                <div class="icon-box">
+                                    <i class="material-icons dp36">camera_enhance</i>
+                                </div>
+                                <h5 class="card-title text-primary pt-5">Chat Anytime</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3 mt-2">
+                        <div class="card border-none wow fadeIn">
+                            <div class="card-body">
+                                <div class="icon-box">
+                                    <i class="material-icons dp36">crop</i>
+                                </div>
+                                <h5 class="card-title text-primary pt-5">Natural Language Support</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3 mt-2">
+                        <div class="card border-none wow fadeIn">
+                            <div class="card-body">
+                                <div class="icon-box">
+                                    <i class="material-icons dp36">cloud_upload</i>
+                                </div>
+                                <h5 class="card-title text-primary pt-5">SNOW Integration</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3 mt-2">
+                        <div class="card border-none wow fadeIn">
+                            <div class="card-body">
+                                <div class="icon-box">
+                                    <i class="material-icons dp36">invert_colors</i>
+                                </div>
+                                <h5 class="card-title text-primary pt-5">Multilingual</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="col-sm-6 col-md-3 mt-2">
+                            <div class="card border-none wow fadeIn">
+                                <div class="card-body">
+                                    <div class="icon-box">
+                                        <i class="material-icons dp36">invert_colors</i>
+                                    </div>
+                                    <h5 class="card-title text-primary pt-5">Multi-Channel</h5>
+                                </div>
+                            </div>
+                        </div> -->
+                </div>
+                <div class="row">
+                    <div>
+                        <video width="1150" height="450" controls autoplay>
+                            <source src="videos/mov_bbb.mp4" type="video/mp4" />
+                        </video>
+                        <!--<iframe src="https://onedrive.live.com/embed?cid=E47B5681D1188A6B&resid=E47B5681D1188A6B%2126350&authkey=AM7bNzsxPW4HnvM" width="320" height="180" frameborder="0" scrolling="no" allowfullscreen></iframe>-->
+                        <!--<embed src="https://onedrive.live.com/embed?cid=E47B5681D1188A6B&resid=E47B5681D1188A6B%2126350&authkey=AM7bNzsxPW4HnvM" allowfullscreen="true" width="425" height="344">-->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--extra features-->
+        <section class="bg-dark text-white" id="extra-features">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 offset-md-3 col-sm-8 offset-sm-2 col-xs-12 text-center wow fadeIn">
+                        <h2 class="text-orange">Features & Details</h2>
+                        <p class="lead">
+                            Built for creative people. Made for high performance.
+                        </p>
+                    </div>
+                </div>
+                <div class="row d-md-flex mt-5">
+                    <div class="col-sm-4 wow fadeIn">
+                        <h5 class="text-orange">Natual Language Support</h5>
+                        <p>Conversation which is as close to a Human Conversation, enabling the user's to interact with the chatbot in an vocabulary independent way.</p>
+                        <h5 class="text-orange pt-5">Integration with SNOW</h5>
+                        <p>Create SNOW incidents and SNOW requests by talking to the chatbot. Chatbot capable of searching the SNOW KB Articles for information and respond to the end user in a conversation.</p>
+                        <h5 class="text-orange pt-5">Application Support Automation</h5>
+                        <p>Seamless integration with the Existing Volvo Applications, enabling application support automation with ease.</p>
+                        <h5 class="text-orange pt-5">IOT Integration</h5>
+                        <p>IOT plays a major role in factory automation. And now IOT sensors can send data to Chatbots, and the users can directly ask chatbot for any IOT sensor information on the go.</p>
+                    </div>
+                    <div class="col-sm-4 wow fadeIn">
+                        <h5 class="text-orange">Multilingual</h5>
+                        <p>It supports 60+ global languages. Dynamically switching languages based on user's location and language use seamlessly.</p>
+                        <h5 class="text-orange pt-5">Integration with RPA</h5>
+                        <p>Integration with RPA Robots, which makes it possible to retrieve information from a legacy system and respond to the end user with the information.<br></p>
+                        <h5 class="text-orange pt-5">Voice Assistance</h5>
+                        <p>Now, users can talk to the chatbot to make the conversation even more seamless and handy. Adding voice opens up a whole new way of customer engagement.</p>
+                        <h5 class="text-orange pt-5">On-Premise</h5>
+                        <p>Volvo Enterprise Chatbot and the corresponding information, is hosted on Volvo Servers keeping in mind the data security.</p>
+                    </div>
+                    <div class="col-sm-4 wow fadeIn">
+                        <h5 class="text-orange">Multi - Channel Availability</h5>
+                        <p>Supporting 12+ platforms where the chatbot shall show up, including Web, Windows, Mobile, Skype for Business, Facebook Messenger etc.</p>
+                        <h5 class="text-orange pt-5">Integration with Personal Assistants</h5>
+                        <p>Chatbot goes headless. Adding Chatbots to Personal Assistants enables users talk to the chatbot on the go and available on multiple devices.</p>
+                        <h5 class="text-orange pt-5">Chat Bot over Phone</h5>
+                        <p>Connect to the Chatbot thru your phone. Dial a toll free number which connects to the chatbot, and start talking to it. Supporting natural language processing, multi language and SNOW integration over phone.</p>
+                        <h5 class="text-orange pt-5">Machine Learning / AI</h5>
+                        <p>Chatbots have the Machine Learning built-in, which learns as and how the users talks to it. We are also working at having a ML Model which provides information to Chatbot for user queries.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--download-->
+        <section class="bg-white" id="RoadMap">
+            <div class="container">
+                <div class="row d-md-flex text-center wow fadeIn">
+                    <div class="col-md-6 col-sm-8 mx-auto text-center">
+                        <h2 class="text-primary">Chat Bot Journey</h2> 
+                    </div>
+                </div>
+                <div>
+                    <p><br><br></p>
+                </div>
+                <div class="row d-md-flex text-center wow fadeIn">
+                    <ul class="timeline">
+                            <li>
+                              <div class="timeline-badge general">Sept/Oct</div>
+                              <div class="timeline-panel">
+                                <div class="timeline-body">
+                                  <h5 class="timeline-title">Demonstrated the POC to DVP Delivery for ePS</h5>
+                                </div>
+                              </div>
+                            </li>
+                            <li> 
+                                <div class="timeline-panel">
+                                      <div class="timeline-body">
+                                        <h5 class="timeline-title">DVP ePS Chatbot Development started</h5>
+                                      </div>
+                                </div>
+                            </li>
+                            <li> 
+                                <div class="timeline-panel">
+                                    <div class="timeline-body">
+                                        <h5 class="timeline-title">Tested End-to-End on Volvo Infrastructure</h5>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="timeline-inverted">
+                              <div class="timeline-badge general">Nov</div>
+                              <div class="timeline-panel">
+                                    <div class="timeline-body">
+                                        <h5 class="timeline-title">Chatbot & IOT Integration</h5>
+                                    </div>
+                              </div>
+                            </li>
+                            <li class="timeline-inverted">
+                              <div class="timeline-panel">
+                                    <div class="timeline-body">
+                                        <h5 class="timeline-title">Voice Recognition feature added successfully</h5>
+                                    </div>
+                              </div>
+                            </li>
+                            <li class="timeline-inverted">
+                              <div class="timeline-panel">
+                                    <div class="timeline-body">
+                                        <h5 class="timeline-title">Multi Language Enabled</h5>
+                                    </div>
+                              </div>
+                            </li>
+
+                            <li>
+                                <div class="timeline-badge general">Dec/Jan</div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-body">
+                                        <h5 class="timeline-title">POC for IOT Chatbot for VCE factory</h5>
+                                    </div>
+                                </div>
+                            </li>
+                            <li> 
+                                <div class="timeline-panel">
+                                    <div class="timeline-body">
+                                        <h5 class="timeline-title">Chatbot & SNOW Integration</h5>
+                                    </div>
+                                </div>
+                            </li>
+                            <li> 
+                                <div class="timeline-panel">
+                                    <div class="timeline-body">
+                                        <h5 class="timeline-title">Added Multiple Channels. Ex: Skype For Business</h5>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="timeline-inverted">
+                                    <div class="timeline-badge general">Feb/March</div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-body">
+                                            <h5 class="timeline-title">First Milestone DVP ePS Chatbot goes LIVE in Production</h5>
+                                        </div>
+                                    </div>
+                            </li>
+                            <li class="timeline-inverted">
+                                    <div class="timeline-panel">
+                                        <div class="timeline-body">
+                                            <h5 class="timeline-title">In Progress - Chatbot for India DMS, Chatbot for GDS</h5>
+                                        </div>
+                                    </div>
+                            </li>
+                            <li>
+                                <div class="timeline-badge general">June/July</div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-body">
+                                            <h5 class="timeline-title">Second Milestone iDEA Chatbot in Production</h5>
+                                        </div>
+                                    </div>
+                            </li>
+                            <li> 
+                                <div class="timeline-panel">
+                                    <div class="timeline-body">
+                                        <h5 class="timeline-title">VVI Chatbot, UDT HR Chatbot under Development</h5>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="timeline-inverted">
+                                <div class="timeline-badge general">Aug</div>
+                              <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                  <h4 class="timeline-title">Milestones Achieved</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>Achieved connecting chatbot to Voice Assistant like Google, Cortana, Alexa etc. Also Integrated Chat Bot to custom Machine learning Algorithms. Enabled Chat Bot over a phone number.</p>
+                                  <!-- <p>Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p> -->
+                                </div>
+                              </div>
+                            </li>
+                    </ul>
+                </div>    
+            </div>
+        </section>
+
+        <!--Gallery-->
+        <section class="bg-orange" id="Gallery">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-8 mx-auto text-center">
+                        <h2 class="text-primary">Gallery</h2>
+                        <p class="lead">
+                            Our different types of Chat Bot
+                        </p>
+                    </div>
+                </div>
+                <div class="row d-md-flex mt-4 text-center">
+                    <div class="col-md-4 mt-2 wow fadeIn">
+                        <div class="card card-outline-primary">
+                            <div class="card-body">
+                                <h5 class="card-title pt-4 text-orange">Basic FAQ Chat Bot</h5>
+                                <!-- <h3 class="card-title text-primary pt-4">FREE</h3>
+                                <p class="card-text text-muted pb-3 border-bottom">per month</p> -->
+                                <ul class="list-unstyled pricing-list">
+                                    <li>Basic Natural Language Processing</li>
+                                    <li>Adaptive Card Support</li>
+                                    <li>Web/Windows and Mobile platform supported</li>
+                                    <li>Cognitive Services QnA Maker</li>
+                                </ul>
+                                <!-- <a href="#" class="btn btn-primary btn-radius">Order Now</a> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mt-2 wow fadeIn">
+                        <div class="card card-outline-primary bg-primary text-white">
+                            <div class="card-body">
+                                <h5 class="card-title pt-4 text-white">Standard Chatbot</h5>
+                                <!-- <h3 class="card-title text-orange pt-4"><sup>$</sup> 9.99</h3>
+                                <p class="card-text text-muted pb-3 border-bottom">per month</p> -->
+                                <ul class="list-unstyled pricing-list">
+                                    <li>Advanced Natural Language Processing</li>
+                                    <li>Extensive Chat UI</li>
+                                    <li>Multi Language Support</li>
+                                    <li>Voice Support (Beta)</li>
+                                </ul>
+                                <!-- <a href="#" class="btn btn-white btn-radius">Order Now</a> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mt-2 wow fadeIn">
+                        <div class="card card-outline-primary">
+                            <div class="card-body">
+                                <h5 class="card-title pt-4 text-orange">Advanced Chatbot</h5>
+                                <!-- <h3 class="card-title text-primary pt-4"><sup>$</sup> 19.99</h3>
+                                <p class="card-text text-muted pb-3 border-bottom">per month</p> -->
+                                <ul class="list-unstyled pricing-list">
+                                    <li>Standard Chatbot</li>
+                                    <li>Featuring SNOW integration</li>
+                                    <li>Integrate with the existing Volvo applications</li>
+                                    <li>Skype for Business integration</li>
+                                </ul>
+                                <!-- <a href="#" class="btn btn-primary btn-radius">Order Now</a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <!--team-->
+        <section class="bg-white" id="team">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-8 mx-auto text-center">
+                        <h2 class="text-primary">Our Team</h2>
+                        <p class="lead">
+                            We're a team of six people.
+                        </p>
+                    </div>
+                </div>
+                <div class="row d-md-flex mt-4 text-center">
+                    <div class="col-sm-4 mt-2 wow fadeIn">
+                        <div class="card border-none">
+                            <div class="card-body">
+                                <img src="img/charan.jpg" alt="Male" class="img-team img-fluid rounded-circle"/>
+                                <h5 class="card-title text-primary pt-4">Charan Shetty</h5>
+                                <p class="card-text">Line Manager</p>
+                                <p class="card-text">charan.shetty@volvo.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 mt-2 wow fadeIn">
+                        <div class="card border-none">
+                            <div class="card-body">
+                                <img src="img/Mahesh.jpg" alt="Male" class="img-team img-fluid rounded-circle"/>
+                                <h5 class="card-title text-primary pt-4">Mahesh Kumar Singh</h5>
+                                <p class="card-text">Team Lead and Architect</p>
+                                <p class="card-text">mahesh.kumar.singh@volvo.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 mt-2 wow fadeIn">
+                        <div class="card border-none">
+                            <div class="card-body">
+                                <img src="img/mainak.jpg" alt="Male" class="img-team img-fluid rounded-circle"/>
+                                <h5 class="card-title text-primary pt-4">Mainak Chatterjee</h5>
+                                <p class="card-text">Developer</p>
+                                <p class="card-text">mainak.chatterjee@volvo.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 mt-2 wow fadeIn">
+                            <div class="card border-none">
+                                <div class="card-body">
+                                    <img src="img/Amar.jpg" alt="Male" class="img-team img-fluid rounded-circle"/>
+                                    <h5 class="card-title text-primary pt-4">Amarnath Dontisriramulu</h5>
+                                    <p class="card-text">Developer</p>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="col-sm-4 mt-2 wow fadeIn">
+                            <div class="card border-none">
+                                <div class="card-body">
+                                    <img src="img/ramesh.jpg" alt="Male" class="img-team img-fluid rounded-circle"/>
+                                    <h5 class="card-title text-primary pt-4">Ramesh Babu Gunisetty</h5>
+                                    <p class="card-text">Developer</p>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="col-sm-4 mt-2 wow fadeIn">
+                            <div class="card border-none">
+                                <div class="card-body">
+                                    <img src="img/Mahim_Gaur.jpg" alt="Male" class="img-team img-fluid rounded-circle"/>
+                                    <h5 class="card-title text-primary pt-4">Mahim Gaur</h5>
+                                    <p class="card-text">Developer</p>
+                                </div>
+                            </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!--contact-->
+        <section class="bg-texture-collage p-0" id="contact">
+            <div class="container">
+                <div class="row d-md-flex text-white text-center wow fadeIn">
+                    <!-- <div class="col-md-4 p-5">
+                        <p><em class="material-icons dp36">phone</em></p>
+                        <p class="lead">+49 5456 87595</p>
+                    </div> -->
+                    <div class= "col-sm-4 wow fadeIn">
+                        <p class="pt-4">
+                            <img src="img/volvo_logo.jpg">
+                        </p> 
+                    </div>
+                    <div class="col-md-4 p-5">
+                        <p><em class="material-icons dp36">email</em></p>
+                        <p class="lead">PPDL.Chatbot.Team@volvo.com</p>
+                    </div>
+                    <div class="col-md-4 p-5">
+                        <p><em class="material-icons dp36">location_on</em></p>
+                        <p class="lead">Bangalore, India</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+        <script src="js/scripts.js"></script>
+        <script>
+                var modal = document.getElementById('myModal');
+                var btn = document.getElementById("myBtn");
+                var span = document.getElementsByClassName("close")[0];
+                var imageChat = document.getElementById("flip");
+
+                btn.onclick = function() {
+                    modal.style.display = "block";
+                }
+                test2.onclick = function() {
+                    modal.style.display = "block";
+                }  
+                chatLine.onclick = function() {
+                    modal.style.display = "block";
+                }
+                imageChat.onclick = function(){
+                    modal.style.display = "block";
+                }
+                span.onclick = function() {
+                    modal.style.display = "none";
+                }
+                window.onclick = function(event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+
+
+                $(document).ready(function () {
+                    //$("#chatBox").slideToggle("slow");
+                    function show_popup() {
+                        $("#chatBox").slideToggle("slow");
+                    };
+                    //window.setTimeout(show_popup, 3000); // 5 seconds
+
+        $("#flip").click(function () {
+            $("#chatBox").slideToggle("slow");
+        });
+    });
+        </script>
+    </body>
+</html>
