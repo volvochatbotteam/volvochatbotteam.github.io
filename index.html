@@ -55,16 +55,18 @@
             </div>
             
         </nav>
-        <div id="myModal" class="modal">
-            <!-- Modal content -->
+        <!-- <div id="myModal" class="modal">
             <div class="modal-content">
                 <span class="close"></span>
                 <p><iframe style="background-color:white; height:430px;width:500px" src='https://volvochatbotteam.github.io/chatbot'></iframe></p>
             </div>
-        </div>
+        </div> -->
         
         <div id="bot">
             <img id="flip" src="img/ic_launcher (2).png" />
+            <div id="chatBox" class="chat_box">
+                <iframe style="background-color:white; height:430px;width:500px" src='https://volvochatbotteam.github.io/chatbot'></iframe>
+        </div>
         </div>
         
         <!--main section-->
@@ -529,44 +531,45 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
         <script src="js/scripts.js"></script>
         <script>
-                var modal = document.getElementById('myModal');
-                var btn = document.getElementById("myBtn");
-                var span = document.getElementsByClassName("close")[0];
+                // var modal = document.getElementById('myModal');
+                // var btn = document.getElementById("myBtn");
+                // var span = document.getElementsByClassName("close")[0];
                 var imageChat = document.getElementById("flip");
 
-                btn.onclick = function() {
-                    modal.style.display = "block";
-                }
-                test2.onclick = function() {
-                    modal.style.display = "block";
-                }  
-                chatLine.onclick = function() {
-                    modal.style.display = "block";
-                }
+                // btn.onclick = function() {
+                //     modal.style.display = "block";
+                // }
+                // test2.onclick = function() {
+                //     modal.style.display = "block";
+                // }  
+                // chatLine.onclick = function() {
+                //     modal.style.display = "block";
+                // }
                 imageChat.onclick = function(){
-                    modal.style.display = "block";
+                $("#chatBox").slideToggle("slow");
                 }
-                span.onclick = function() {
-                    modal.style.display = "unset";
-                }
-                window.onclick = function(event) {
-                    if (event.target == modal) {
-                        modal.style.display = "unset";
-                    }
-                }
+                // span.onclick = function() {
+                //     modal.style.display = "unset";
+                // }
+                // window.onclick = function(event) {
+                // if (event.target == modal) {
+                //     modal.style.display = "unset";
+                // }
+                // $("#chatBox").slideToggle("slow");
+                // }
 
 
                 $(document).ready(function () {
-                    //$("#chatBox").slideToggle("slow");
-                    function show_popup() {
-                        $("#chatBox").slideToggle("slow");
-                    };
-                    //window.setTimeout(show_popup, 3000); // 5 seconds
-
-                $("#flip").click(function () {
                     $("#chatBox").slideToggle("slow");
+                        function show_popup() {
+                            $("#chatBox").slideToggle("slow");
+                        };
+                        //window.setTimeout(show_popup, 3000); // 5 seconds
+
+                    // $("#flip").click(function () {
+                    //     $("#chatBox").slideToggle("slow");
+                    // });
                 });
-    });
         </script>
     </body>
 </html>
