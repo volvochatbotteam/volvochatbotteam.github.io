@@ -6633,6 +6633,35 @@ section {
   width: 60px;
   height: 60px; }
 
+.snow-icon-box{
+  color:#fff;
+  background-color: rgb(236, 13, 13);
+  vertical-align: middle;
+  border-radius: 50px !important;
+  padding: 12px;
+  display: inline-block;
+  width: 60px;
+  height: 60px; }
+
+.nlp-icon-box{
+  color:#fff;
+  background-color: rgb(13, 236, 61);
+  vertical-align: middle;
+  border-radius: 50px !important;
+  padding: 12px;
+  display: inline-block;
+  width: 60px;
+  height: 60px; }
+  
+.time-icon-box{
+  color:#fff;
+  background-color: rgb(202, 236, 13);
+  vertical-align: middle;
+  border-radius: 50px !important;
+  padding: 12px;
+  display: inline-block;
+  width: 60px;
+  height: 60px; }
 /*===============================================
 * Colored Buttons
 ================================================*/
