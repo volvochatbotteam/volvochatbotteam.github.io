@@ -532,13 +532,14 @@
         <script src="js/scripts.js"></script>
         <script>
                 // var modal = document.getElementById('myModal');
-                // var btn = document.getElementById("myBtn");
-                // var span = document.getElementsByClassName("close")[0];
+                var btn = document.getElementById("myBtn");
+                var span = document.getElementById("chatLine");
                 var imageChat = document.getElementById("flip");
 
-                // btn.onclick = function() {
-                //     modal.style.display = "block";
-                // }
+                btn.onclick = function() {
+                    //modal.style.display = "block";
+                    $("#chatBox").slideToggle("slow");
+                }
                 // test2.onclick = function() {
                 //     modal.style.display = "block";
                 // }  
@@ -546,11 +547,12 @@
                 //     modal.style.display = "block";
                 // }
                 imageChat.onclick = function(){
-                $("#chatBox").slideToggle("slow");
+                    $("#chatBox").slideToggle("slow");
                 }
-                // span.onclick = function() {
-                //     modal.style.display = "unset";
-                // }
+                span.onclick = function() {
+                    // modal.style.display = "unset";
+                    $("#chatBox").slideToggle("slow");
+                }
                 // window.onclick = function(event) {
                 // if (event.target == modal) {
                 //     modal.style.display = "unset";
@@ -561,10 +563,10 @@
 
                 $(document).ready(function () {
                     $("#chatBox").slideToggle("slow");
-                        function show_popup() {
-                            $("#chatBox").slideToggle("slow");
-                        };
-                        //window.setTimeout(show_popup, 3000); // 5 seconds
+                    // function show_popup() {
+                    //     $("#chatBox").slideToggle("slow");
+                    // };
+                    //window.setTimeout(show_popup, 3000); // 5 seconds
 
                     // $("#flip").click(function () {
                     //     $("#chatBox").slideToggle("slow");
