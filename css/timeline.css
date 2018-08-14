@@ -146,3 +146,9 @@
 .timeline-body > p + p {
   margin-top: 5px;
 }
+
+.timeline-badge p{
+position: absolute;
+top: 20%;
+left: 33%;
+}
