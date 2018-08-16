@@ -550,6 +550,7 @@
                 imageChat.onclick = function(){
                     $("#chatBox").slideToggle("slow");
                     $("#flip").addClass('hideimage');
+                    $("#flip").removeClass('showimage');
                 }
                 // span.onclick = function() {
                 //     // modal.style.display = "unset";
@@ -573,6 +574,7 @@
                         if(e.data == 'minBtn'){
                             //console.log("received");
                             $("#chatBox").slideToggle("slow");
+                            $("#flip").removeClass('hideimage');
                             $("#flip").addClass('showimage');
                         }
                     }, false); 
