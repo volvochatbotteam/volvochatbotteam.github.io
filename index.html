@@ -53,14 +53,25 @@
                     </li>
                 </ul>
             </div>
-            
         </nav>
-        <!-- <div id="myModal" class="modal">
-            <div class="modal-content">
-                <span class="close"></span>
-                <p><iframe style="background-color:white; height:430px;width:500px" src='https://volvochatbotteam.github.io/chatbot'></iframe></p>
+
+        <!-- Modal -->
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h4 class="modal-title">Recommendation</h4>
+                    </div>
+                    <div class="modal-body">
+                    <p>We recommend using either Chrome, Firefox or Opera for Best Experience</p>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
             </div>
-        </div> -->
+        </div>
         
         <div id="bot">
             <img id="flip" src="img/ic_launcher (2).png" />
@@ -529,14 +540,21 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/is_js/0.9.0/is.js"></script>
         <script src="js/scripts.js"></script>
         <script>
                 $("#flip").addClass('hideimage');
-                // var modal = document.getElementById('myModal');
+                $("#chatBox").addClass('hideimage');
+                $("#chatBox").slideToggle('fast');
+                //var modal = document.getElementById('myModal');
                 var btn = document.getElementById("myBtn");
+                //let okBtn = document.getElementById("okBtn");
                 //var span = document.getElementById("chatLine");
                 var imageChat = document.getElementById("flip");
-                let minBtn;
+
+                // okBtn.onclick = function() {
+                //     $("#myModal").modal("hide");
+                // }
 
                 btn.onclick = function() {
                     //modal.style.display = "block";
@@ -549,10 +567,15 @@
                 //     modal.style.display = "block";
                 // }
                 imageChat.onclick = function(){
-                    $("#flip").addClass('hideimage');
-                    $("#flip").removeClass('showimage');
-                    $("#chatBox").slideToggle("slow");
-                    
+                    if(is.chrome() || is.firefox() || is.opera()){
+                        $("#flip").addClass('hideimage');
+                        $("#flip").removeClass('showimage');
+                        $("#chatBox").addClass('showimage');
+                        $("#chatBox").slideToggle("slow");
+                    }
+                    else{
+                        $("#myModal").modal("show");
+                    }
                 }
                 // span.onclick = function() {
                 //     // modal.style.display = "unset";
@@ -567,11 +590,10 @@
 
 
                 $(document).ready(function () {
-                    $("#chatBox").slideToggle("fast", function(){
-                        $("#flip").removeClass('hideimage');
-                        $("#flip").addClass('showimage');
-                    });
                     
+                    $("#flip").removeClass('hideimage');
+                    $("#flip").addClass('showimage');
+
                     var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
                     var eventer = window[eventMethod];
                     var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
