@@ -63,10 +63,10 @@
         </div> -->
         
         <div id="bot">
-            <img id="flip" src="img/ic_launcher (2).png" />
             <div id="chatBox" class="chat_box">
                 <iframe id="botFrame" style="background-color:white; height:430px;width:500px" src='https://volvochatbotteam.github.io/chatbot'></iframe>
             </div>
+            <img id="flip" src="img/ic_launcher (2).png" />
         </div>
         
         <!--main section-->
@@ -531,6 +531,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
         <script src="js/scripts.js"></script>
         <script>
+                $("#flip").addClass('hideimage');
                 // var modal = document.getElementById('myModal');
                 var btn = document.getElementById("myBtn");
                 //var span = document.getElementById("chatLine");
@@ -548,9 +549,10 @@
                 //     modal.style.display = "block";
                 // }
                 imageChat.onclick = function(){
-                    $("#chatBox").slideToggle("slow");
                     $("#flip").addClass('hideimage');
                     $("#flip").removeClass('showimage');
+                    $("#chatBox").slideToggle("slow");
+                    
                 }
                 // span.onclick = function() {
                 //     // modal.style.display = "unset";
@@ -565,7 +567,10 @@
 
 
                 $(document).ready(function () {
-                    $("#chatBox").slideToggle("fast");
+                    $("#chatBox").slideToggle("fast", function(){
+                        $("#flip").removeClass('hideimage');
+                        $("#flip").addClass('showimage');
+                    });
                     
                     var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
                     var eventer = window[eventMethod];
@@ -573,9 +578,10 @@
                     eventer(messageEvent, function (e) {
                         if(e.data == 'minBtn'){
                             //console.log("received");
-                            $("#chatBox").slideToggle("slow");
-                            $("#flip").removeClass('hideimage');
-                            $("#flip").addClass('showimage');
+                            $("#chatBox").slideToggle("slow", function() {
+                                $("#flip").removeClass('hideimage');
+                                $("#flip").addClass('showimage');
+                            });
                         }
                     }, false); 
                     // function show_popup() {
