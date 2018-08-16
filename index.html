@@ -65,8 +65,8 @@
         <div id="bot">
             <img id="flip" src="img/ic_launcher (2).png" />
             <div id="chatBox" class="chat_box">
-                <iframe style="background-color:white; height:430px;width:500px" src='https://volvochatbotteam.github.io/chatbot'></iframe>
-        </div>
+                <iframe id="botFrame" style="background-color:white; height:430px;width:500px" src='https://volvochatbotteam.github.io/chatbot'></iframe>
+            </div>
         </div>
         
         <!--main section-->
@@ -535,6 +535,7 @@
                 var btn = document.getElementById("myBtn");
                 //var span = document.getElementById("chatLine");
                 var imageChat = document.getElementById("flip");
+                let minBtn;
 
                 btn.onclick = function() {
                     //modal.style.display = "block";
@@ -548,6 +549,7 @@
                 // }
                 imageChat.onclick = function(){
                     $("#chatBox").slideToggle("slow");
+                    $("#flip").addClass('hideimage');
                 }
                 // span.onclick = function() {
                 //     // modal.style.display = "unset";
@@ -562,7 +564,18 @@
 
 
                 $(document).ready(function () {
-                    $("#chatBox").slideToggle("slow");
+                    $("#chatBox").slideToggle("fast");
+                    
+                    var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+                    var eventer = window[eventMethod];
+                    var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
+                    eventer(messageEvent, function (e) {
+                        if(e.data == 'minBtn'){
+                            //console.log("received");
+                            $("#chatBox").slideToggle("slow");
+                            $("#flip").addClass('showimage');
+                        }
+                    }, false); 
                     // function show_popup() {
                     //     $("#chatBox").slideToggle("slow");
                     // };

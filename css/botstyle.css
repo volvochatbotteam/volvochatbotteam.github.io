@@ -71,3 +71,11 @@
     right: 1%;
     z-index: 99;
 }
+
+.hideimage {
+    visibility: hidden;
+}
+
+.showimage {
+    visibility: visible;
+}
