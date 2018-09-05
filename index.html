@@ -543,11 +543,11 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/is_js/0.9.0/is.js"></script>
         <script src="js/scripts.js"></script>
         <script>
-                $("#flip").addClass('hideimage');
-                $("#chatBox").addClass('hideimage');
-                $("#chatBox").slideToggle('fast');
+                //$("#flip").addClass('hideimage');
+                //$("#chatBox").addClass('hideimage');
+                //$("#chatBox").slideToggle('fast');
                 //var modal = document.getElementById('myModal');
-                var btn = document.getElementById("myBtn");
+                //var btn = document.getElementById("myBtn");
                 //let okBtn = document.getElementById("okBtn");
                 //var span = document.getElementById("chatLine");
                 var imageChat = document.getElementById("flip");
@@ -556,10 +556,10 @@
                 //     $("#myModal").modal("hide");
                 // }
 
-                btn.onclick = function() {
+               // btn.onclick = function() {
                     //modal.style.display = "block";
-                    $("#chatBox").slideToggle("slow");
-                }
+                   // $("#chatBox").slideToggle("slow");
+                //}
                 // test2.onclick = function() {
                 //     modal.style.display = "block";
                 // }  
@@ -568,9 +568,9 @@
                 // }
                 imageChat.onclick = function(){
                     //if(is.chrome() || is.firefox() || is.opera()){
-                        $("#flip").addClass('hideimage');
-                        $("#flip").removeClass('showimage');
-                        $("#chatBox").addClass('showimage');
+                        //$("#flip").addClass('hideimage');
+                        //$("#flip").removeClass('showimage');
+                        //$("#chatBox").addClass('showimage');
                         $("#chatBox").slideToggle("slow");
                     //}
                     //else{
@@ -589,23 +589,23 @@
                 // }
 
 
-                $(document).ready(function () {
+               // $(document).ready(function () {
                     
-                    $("#flip").removeClass('hideimage');
-                    $("#flip").addClass('showimage');
+                    //$("#flip").removeClass('hideimage');
+                    //$("#flip").addClass('showimage');
 
-                    var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
-                    var eventer = window[eventMethod];
-                    var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
-                    eventer(messageEvent, function (e) {
-                        if(e.data == 'minBtn'){
+                    //var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+                   // var eventer = window[eventMethod];
+                    //var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
+                   // eventer(messageEvent, function (e) {
+                        //if(e.data == 'minBtn'){
                             //console.log("received");
-                            $("#chatBox").slideToggle("slow", function() {
-                                $("#flip").removeClass('hideimage');
-                                $("#flip").addClass('showimage');
-                            });
-                        }
-                    }, false); 
+                           // $("#chatBox").slideToggle("slow", function() {
+                               // $("#flip").removeClass('hideimage');
+                               // $("#flip").addClass('showimage');
+                            //});
+                       // }
+                 //   }, false); 
                     // function show_popup() {
                     //     $("#chatBox").slideToggle("slow");
                     // };
@@ -614,7 +614,7 @@
                     // $("#flip").click(function () {
                     //     $("#chatBox").slideToggle("slow");
                     // });
-                });
+               // });
         </script>
     </body>
 </html>
