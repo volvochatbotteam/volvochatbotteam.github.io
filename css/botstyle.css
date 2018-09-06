@@ -67,7 +67,7 @@
 }
 
 #bot {
-    /* float: right; */
+    float: right;
     position: absolute;
     bottom: 2%;
     right: 1%;
